@@ -153,20 +153,6 @@ img.image-grid{
   font-size: 1.1rem;
   letter-spacing: 1px;
 }
-.placed-order {
-  background: #e60012;
-  font-weight: bold;
-  opacity: .6;
-  font-size: 20px;
-  color:white;
-  justify-self: center;
-  text-align: center;
-  margin-top: 40px;
-  width: 150px;
-  align-self: center;  
-
-
-}
 .fav-container {
   display: grid;
   grid-gap: 15px;

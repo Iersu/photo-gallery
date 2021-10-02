@@ -3,7 +3,6 @@ import { Context } from '../Context'
 import CartItem from '../components/CartItem'
 function Cart() {
     const [buttonText,setButtonText] = useState("Place Order")
-    const [orderPlaced, setOrderPlaced] = useState(false)
     const {cartItems,emptyCart}  = useContext(Context)
 
     const cartElemenets = cartItems.map(item => {
@@ -13,16 +12,11 @@ function Cart() {
     function placeOrder(){
         setButtonText("Ordering...")
         setTimeout(() => {
-            console.log("Order Placed")
-            setOrderPlaced(true)
             emptyCart()
             setButtonText("Place Order")
         },3000)
     
-        setTimeout(() => {
-        setOrderPlaced(false)
-           },6000)
-        
+  
     }
 
     return (
@@ -37,7 +31,7 @@ function Cart() {
         </div> :
         <p className="info-text">You have no items in the cart</p>
         }
-       {orderPlaced && <div className="placed-order"><p>order is placed</p></div>}
+       
 
         </main>
     )

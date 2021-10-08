@@ -1,21 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
 import reportWebVitals from './reportWebVitals'
-import {HashRouter as Router} from 'react-router-dom'
-import {ContextProvider} from './Context'
+import { HashRouter as Router } from 'react-router-dom'
+import { ContextProvider } from './Context'
 
 ReactDOM.render(
   <React.StrictMode>
     <ContextProvider>
-      <Router basename='/photo-gallery'>
+      <Router basename="/photo-gallery">
         <App />
-       </Router>
+      </Router>
     </ContextProvider>
-  </React.StrictMode>
-  ,
+  </React.StrictMode>,
   document.getElementById('root')
 )
-
 
 reportWebVitals()
